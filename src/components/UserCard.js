@@ -3,9 +3,7 @@ import '../App.css';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 export default function UserCard(props) {
-    const handleClick =() => {
-           console.log(props.name) 
-    }
+    
     return(
        
         <div className="user-cards">
