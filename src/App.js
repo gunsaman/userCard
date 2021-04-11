@@ -1,25 +1,47 @@
 import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import UserCard from '../src/components/UserCard';
+import UserDetail from '../src/components/UserDetail';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(props) {
+  const url_link = "https://jsonplaceholder.typicode.com/users";
+  const [users, setUsers] = useState([]);
+
+  // calling getData function after first rendering
+  useEffect(()=> {
+      getData();
+
+  },[]);
+
+// fetch data from api and save it to the users variable
+  const getData = () => {
+    fetch(url_link)
+      .then(response => response.json())
+      .then(data => setUsers(data))
+  }
+  
+  return(
+    <Router>
+      <Route exact path="/">
+      <div className="cards" >
+          {users.map
+            (user => <UserCard 
+                        key={user.id} 
+                        id = {user.id} 
+                        name={user.name} 
+                        username={user.username} 
+                        website={user.website}
+                        /> )}
+      </div>
+      </Route>
+      <Route path="/user/:id">
+        <UserDetail data={users} />
+      </Route>
+    </Router>
+  )
 }
 
 export default App;
