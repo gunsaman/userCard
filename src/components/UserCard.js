@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
-import Button from '@material-ui/core/Button';
+import ButtonComponent from './ButtonComponent';
 import { Link } from 'react-router-dom';
+
 export default function UserCard(props) {
     
     return(
@@ -13,7 +14,7 @@ export default function UserCard(props) {
                 <div className="main-content">@{props.username}</div>
                 <div className="main-content"><a href={props.website}>https://{props.website}</a></div>
             </div>
-            <Link to={`/user/${props.id}`} style={{textDecoration:"none"}}><Button variant="contained" color="primary" >More Details</Button> </Link>
+            <Link to={`/user/${props.id}`} style={{textDecoration:"none"}}><ButtonComponent/> </Link>
         </div>
     )
 }

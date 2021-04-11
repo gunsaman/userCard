@@ -14,7 +14,7 @@ body {
   border-radius: 50%;
   background: #a1b1d4;
   font-size: 35px;
-  color:#4b3636 ;
+  color:white ;
   text-align: center;
   line-height: 90px;
   margin: 5px auto;
@@ -51,6 +51,7 @@ body {
   padding:10px;
   box-shadow: 10px 10px 5px grey;
 }
+
 
 
 

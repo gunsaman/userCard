@@ -3,8 +3,11 @@ import {useParams} from 'react-router-dom';
 import '../App.css';
 
 export default function UserDetail({data}){
+    const users = [{data}];
+    console.log(users)
     const {id} = useParams();
-    const  fullUserDetail = (data.filter(user => user.id === Number(id)));
+    const  fullUserDetail = (users[0].data.filter(user => user.id === Number(id)));
+    
     return(
         <div className="full-card">
             <h1>{fullUserDetail[0].name}</h1>
