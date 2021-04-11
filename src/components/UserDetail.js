@@ -2,7 +2,7 @@ import React from 'react';
 import {useParams} from 'react-router-dom';
 import '../App.css';
 
-export default function({data}){
+export default function UserDetail({data}){
     const {id} = useParams();
     const  fullUserDetail = (data.filter(user => user.id == id));
     return(
@@ -19,13 +19,7 @@ export default function({data}){
                 <li>suite:{fullUserDetail[0].address.suite}</li>
                 <li>city:{fullUserDetail[0].address.city}</li>
                 <li>zipcode:{fullUserDetail[0].address.zipcode}</li>
-            </ul>
-            
-             
-            
-            
-            
-           {console.log(fullUserDetail)}
+            </ul>                                                
         </div>
     )
 }
