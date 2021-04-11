@@ -57,7 +57,12 @@ export default function UserCard(props) {
                      <Link to={`/user/${props.id}`} style={{textDecoration:"none"}}><ButtonComponent/> </Link>
                 </CardActions>
             </Card>
-            {/* <div className="card-icon">
+            
+            {/* 
+            
+            old code for custom UserCard component
+
+            <div className="card-icon">
                 <Avatar>{props.name.charAt(0)}</Avatar>
             </div>
             <div className="card-body">

@@ -84,7 +84,11 @@ export default function UserDetail({data}){
             
         </CardActions>
     </Card>
-       /* { <div className="full-card">
+
+
+       /* old code for UserDetail component berore using material ui Card component
+       
+       { <div className="full-card">
             <div className="card-content">
             <h1>{fullUserDetail[0].name}</h1>
             <Divider variant="middle" />
