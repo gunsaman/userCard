@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
+      marginTop:40,
       maxWidth:230,
       minWidth: 200,
       minHeight:250,
@@ -48,7 +49,7 @@ export default function UserCard(props) {
                     @{props.username}
                     </Typography>
                     <Typography variant="subtitle2" component="p">
-                    <a href="#">https://{props.website}</a>
+                    <a href="">https://{props.website}</a>
                     <br />
                     
                     </Typography>
