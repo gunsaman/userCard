@@ -6,7 +6,7 @@ import UserCard from '../src/components/UserCard';
 import UserDetail from '../src/components/UserDetail';
 
 
-function App(props) {
+export default function App(props) {
   const url_link = "https://jsonplaceholder.typicode.com/users";
   const [users, setUsers] = useState([]);
 
@@ -44,4 +44,3 @@ function App(props) {
   )
 }
 
-export default App;
