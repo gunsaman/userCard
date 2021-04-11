@@ -48,7 +48,7 @@ export default function UserCard(props) {
                     @{props.username}
                     </Typography>
                     <Typography variant="subtitle2" component="p">
-                    <a href={props.website}>https://{props.website}</a>
+                    <a href="#">https://{props.website}</a>
                     <br />
                     
                     </Typography>
