@@ -41,7 +41,7 @@ export default function UserDetail({data}){
         <Card className={classes.root}>
         <CardContent>
             <div className="card-title">
-                <Typography className={classes.title} color="textPrimary" className={classes.pos}>
+                <Typography color="textPrimary" className={classes.pos}>
                     <h1>{fullUserDetail[0].name}</h1>
                     
                 </Typography>
