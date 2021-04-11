@@ -4,7 +4,7 @@ import '../App.css';
 
 export default function UserDetail({data}){
     const {id} = useParams();
-    const  fullUserDetail = (data.filter(user => user.id == id));
+    const  fullUserDetail = (data.filter(user => user.id === Number(id)));
     return(
         <div className="full-card">
             <h1>{fullUserDetail[0].name}</h1>
