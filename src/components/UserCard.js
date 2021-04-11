@@ -49,7 +49,7 @@ export default function UserCard(props) {
                     @{props.username}
                     </Typography>
                     <Typography variant="subtitle2" component="p">
-                    <a href="">https://{props.website}</a>
+                    <a href="https://www.integrify.io/">https://{props.website}</a>
                     <br />
                     
                     </Typography>
