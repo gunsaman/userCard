@@ -55,11 +55,13 @@ export default function UserDetail({data}){
             <Typography variant="subtitle2" className={classes.pos} color="textSecondary">
             <Envelope /> Email: {fullUserDetail[0].email}
             </Typography>
-
+            <Typography  variant="subtitle2" color="textSecondary" className={classes.pos}>
+            <Globe  />  Website: http://{fullUserDetail[0].website}
+            </Typography>
             <Typography  variant="subtitle2" color="textSecondary" className={classes.pos}>
             <Building  /> Company: {fullUserDetail[0].company.name}
             </Typography>
-
+        
             <Typography variant="subtitle2">
              <TelephoneFill />  {fullUserDetail[0].phone}
             <Typography>
